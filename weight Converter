@@ -1,0 +1,74 @@
+package project;
+
+//importing scanner class
+import java.util.Scanner;
+
+public class WeightConverter {
+
+	
+	public static void main(String[] args) {
+
+		//creating an object for scanner class
+		Scanner scanner = new Scanner(System.in); 
+		
+		//looping through the options till user want to exit
+		while(true)
+		{
+			//printing the options for the users to choose from
+			System.out.println("CHOOSE A FUNCTION\n\n********************\n\n1.Convert Kg to pounds\n2.Convert Kg to ounce\n\n3.Convert pound to Kg\n4.Convert pound to ounce\n\n5.Convert ounce to Kg\n6.Convert ounce to pound\n\n7.Exit");
+			
+			//taking option number as input from the user
+			int option = scanner.nextInt();
+			
+			//performing different operations using switch
+			switch(option)
+			{
+				case 1:
+					System.out.println("Enter the weight in kilograms");
+					double weight1 = scanner.nextDouble();
+					System.out.println(weight1+" kg = "+weight1*2.205+" pounds");
+					break;
+				
+				case 2:
+					System.out.println("Enter the weight in kilograms");
+					double weight2 = scanner.nextDouble();
+					System.out.println(weight2+" kg = "+weight2*35.274+" ounces");
+					break;
+					
+				case 3:
+					System.out.println("Enter the weight in pounds");
+					double weight3 = scanner.nextDouble();
+					System.out.println(weight3+" pound = "+weight3/2.205+" Kg");
+					break;
+					
+				case 4:
+					System.out.println("Enter the weight in pounds");
+					double weight4 = scanner.nextDouble();
+					System.out.println(weight4+" pound = "+weight4*16+" ounces");
+					break;
+					
+				case 5:
+					System.out.println("Enter the weight in ounces");
+					double weight5 = scanner.nextDouble();
+					System.out.println(weight5+" ounces = "+weight5/35.274+" Kg");
+					break;
+					
+				case 6:
+					System.out.println("Enter the weight in ounces");
+					double weight6 = scanner.nextDouble();
+					System.out.println(weight6+" ounces = "+weight6/16+" pounds");
+					break;
+					
+				case 7:
+					System.out.println("THANK YOU FOR USING CONVERTER");
+					return;
+					
+				default:
+					System.out.println("Enter a valid option");
+			}
+			
+			
+		}
+	}
+
+}
